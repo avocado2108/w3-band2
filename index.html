@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Band 3</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/font/themify-icons-font/themify-icons/themify-icons.css">
 </head>
 <body>
@@ -32,10 +33,16 @@
                     <i class="text-white search-icon ti-search"></i>
                 </div>
             </div>
+
+            <div id="mobile-menu-item">
+                <div class="mobile-menu-btn">
+                    <i class="text-white menu-icon ti-menu"></i>
+                </div>
+            </div>
         </div>
 
         <div id="slider">
-            <div class="col-100 text-center text-white slider-text">
+            <div class="col-100 text-white slider-text">
                 <h2 class="slider-head">Chicago</h2>
                 <p class="slider-subhead">Thank you, Chicago! A night we won't forget!</p>
             </div>
@@ -48,15 +55,15 @@
                     <p class="section-subhead">We love music</p>
                     <p class="section-des">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     <div class="row member-list">
-                        <div class="col col-30 float-l member-item">
+                        <div class="s-col-full col col-30 float-l member-item">
                             <h3 class="member-name">Name</h3>
                             <img class="member-img" src="./assets/img/band-member/bm1.jpg" alt="">
                         </div>
-                        <div class="col col-30 float-l member-item">
+                        <div class="s-col-full col col-30 float-l member-item">
                             <h3 class="member-name">Name</h3>
                             <img class="member-img" src="./assets/img/band-member/bm1.jpg" alt="">
                         </div>
-                        <div class="col col-30 float-l member-item">
+                        <div class="s-col-full col col-30 float-l member-item">
                             <h3 class="member-name">Name</h3>
                             <img class="member-img" src="./assets/img/band-member/bm1.jpg" alt="">
                         </div>
@@ -76,8 +83,8 @@
                         </div>
                         <div class="row tour-list">
                             <!--Newyork-->
-                            <div class="float-l col-30 tour-item">
-                                <img class="col tour-img" src="./assets/img/tour-places/newyork.jpg" alt="New York">
+                            <div class="s-col-full float-l col-30 tour-item">
+                                <img class="col-100 tour-img" src="./assets/img/tour-places/newyork.jpg" alt="New York">
                                 <div class="tour-info">
                                     <h3 class="tour-place">New york</h3>
                                     <p class="tour-time">Fri 27 Nov 2016</p>
@@ -86,8 +93,8 @@
                                 </div>
                             </div>
                             <!--Paris-->
-                            <div class="float-l col-30 tour-item">
-                                <img class="col tour-img" src="./assets/img/tour-places/paris.jpg" alt="Paris">
+                            <div class="s-col-full float-l col-30 tour-item">
+                                <img class="col-100 tour-img" src="./assets/img/tour-places/paris.jpg" alt="Paris">
                                 <div class="tour-info">
                                     <h3 class="tour-place">Paris</h3>
                                     <p class="tour-time">Sat 28 Nov 2016</p>
@@ -96,8 +103,8 @@
                                 </div>
                             </div>
                             <!--San Francisco-->
-                            <div class="float-l col-30 tour-item">
-                                <img class="col tour-img" src="./assets/img/tour-places/sanfran.jpg" alt="San Francisco">
+                            <div class="pad-bot-64 s-col-full float-l col-30 tour-item">
+                                <img class="col-100 tour-img" src="./assets/img/tour-places/sanfran.jpg" alt="San Francisco">
                                 <div class="tour-info">
                                     <h3 class="tour-place">San Francisco</h3>
                                     <p class="tour-time">Fri 27 Nov 2016</p>
@@ -191,7 +198,7 @@
         const modal = document.querySelector('.js-modal')
         const modalContainer = document.querySelector('.js-modal-container')
         const modalClose = document.querySelector('.js-modal-close')
-    
+
         //hàm hiển thị modal mua vé (thêm class open vào modal)
         function showBuyTickets() {
             modal.classList.add('open')
@@ -217,6 +224,37 @@
         modalContainer.addEventListener('click', function (event) {
             event.stopPropagation()
         })
+        //Gán giá trị coh các biến//
+        var header= document.getElementById('header');
+        var mobileMenu= document.getElementById('mobile-menu-item');
+        var headerHeight = header.clientHeight;    
+        
+        //Đóng mở mobile menu//
+        mobileMenu.onclick = function() {
+            var isClosed = header.clientHeight === headerHeight;
+            if (isClosed) {
+                header.style.height = 'auto';
+            } else {
+                header.style.height = null;
+            }
+        }
+
+        //tự động đóng khi click phần tử menu//
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        //console.log(menuItems)
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            console.log(menuItem.nextElementSibling)
+            menuItem.onclick = function(event) {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                //console.log(this)
+                if(isParentMenu) {
+                    event.preventDefault();
+                } else {
+                    header.style.height = null;
+                }
+            }
+        }
 
     </script>
 </body>

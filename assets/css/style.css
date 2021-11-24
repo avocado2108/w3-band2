@@ -18,7 +18,7 @@ html {
     text-align: center;
 }
 
-.col {
+.col-100 {
     width: 100%;
 }
 
@@ -103,12 +103,34 @@ html {
     float: right;
 }
 
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn,
 #header .search-btn {
+    float: right;
     padding: 0px 24px;
 }
 
 #header .search-btn:hover {
     background-color: darkred;
+}
+
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000;
+}
+
+#header .menu-icon {
+    font-size: 18px;
+    line-height: 46px;
 }
 
 #header .search-icon {
@@ -125,6 +147,7 @@ html {
 }
 
 #slider .slider-text {
+    text-align: center;
     position: absolute;
     bottom: 0px;
     padding: 32px 16px;
@@ -151,8 +174,11 @@ html {
 
 #content .section-text {
     width: 800px;
+    max-width: 100%;
     margin-right: auto;
     margin-left: auto;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #content .section-head {
@@ -472,6 +498,3 @@ html {
         transform: translateY(0px);
     }
 }
-
-
-

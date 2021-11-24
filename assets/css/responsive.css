@@ -1,0 +1,69 @@
+/* PC */
+@media (min-width: 1024px) {
+    .pc {
+        display: block;
+    }
+}
+
+/* TABLE */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .table {
+        display: block;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 740px) {
+    #header {
+        overflow: hidden;
+    }
+
+    #header .search-btn {
+        display: none;
+    }
+    
+    #header .mobile-menu-btn {
+        display: block;
+    }
+
+    #nav {
+        display: block;
+        float: none;
+    }
+    
+    #nav li {
+        display: block;
+    }
+
+    #nav .subnav {
+        position: initial;
+    }
+
+    #nav .subnav a {
+        color: #fff;
+        background-color: #333;
+        padding: 5px 36px;
+        width: inherit;
+    }
+
+    #nav > li:first-child {
+        display: inline-block;
+    }
+
+    .s-col-full {
+        width: 100%;
+    }
+
+    #content .member-img {
+        width: 60%;
+    }
+
+    #content .tour-item {
+        padding: 8px 8px;
+    }
+
+    #content .pad-bot-64 {
+        padding-bottom: 72px;
+    }
+}
+
