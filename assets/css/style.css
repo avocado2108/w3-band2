@@ -18,6 +18,12 @@ html {
     text-align: center;
 }
 
+.col {
+    float:left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
 .col-100 {
     width: 100%;
 }
@@ -33,6 +39,20 @@ html {
 .row {
     margin-left: -8px;
     margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
 }
 
 .float-l {
@@ -186,6 +206,7 @@ html {
     font-weight: lighter;
     letter-spacing: 4px;
     margin: 10px;
+    text-transform: uppercase;
 }
 
 #content .section-subhead {
@@ -305,49 +326,33 @@ html {
     cursor: pointer;
 }
 
+#content .contact-content {
+    margin-top: 48px;
+}
 #content .contact-info {
     text-align: left;
-    float: left;
     font-size: 18px;
-    line-height: 32px;
+    line-height: 28px;
     margin-bottom: 16px;
-    padding: 32px 0px;
     display: block;
 }
 
 #content .contact-icon {
-    margin: 0px 12px;
-    font-size: 16px;
+    width: 30px;
+    display: inline-block;
 }
 
-#content .messenger {
-    display: block;
-    float: right;
-    width: 50%;
-    margin-top: 30px;
-    position: relative;
+#content .contact-form {
+    font-size: 15px;
 }
 
-#content .mess-info {
-    padding: 8px 0px;
-}
-
-#content .mess-input {
-    font-size: inherit;
-    padding: 8px;
-}
-
-.mess-wth45 {
-    width: 49.3%;
-}
-
-.mess-wth {
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
     width: 100%;
 }
 
 #content .mess-send {
-    margin-top: 16px;
-    margin-bottom: 72px;
     padding: 8px 16px;
     border: none;
     background-color: #000;

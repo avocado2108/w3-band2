@@ -50,8 +50,12 @@
         display: inline-block;
     }
 
-    .s-col-full {
+    .s-full-width, .s-col-full {
         width: 100%;
+    }
+
+    .s-mt-8 {
+        margin-top: 8px;
     }
 
     #content .member-img {
@@ -62,8 +66,12 @@
         padding: 8px 8px;
     }
 
-    #content .pad-bot-64 {
-        padding-bottom: 72px;
+    #content .contact-info {
+        margin-bottom: 10px;
+    }
+
+    #content .tour-ticket {
+        margin-bottom: 0px;
     }
 }
 

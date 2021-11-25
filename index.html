@@ -89,7 +89,7 @@
                                     <h3 class="tour-place">New york</h3>
                                     <p class="tour-time">Fri 27 Nov 2016</p>
                                     <p class="tour-des">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <button class="text-white tour-ticket js-buy-tk">Buy tickets</button>
+                                    <button class="s-full-width text-white tour-ticket js-buy-tk">Buy tickets</button>
                                 </div>
                             </div>
                             <!--Paris-->
@@ -99,17 +99,17 @@
                                     <h3 class="tour-place">Paris</h3>
                                     <p class="tour-time">Sat 28 Nov 2016</p>
                                     <p class="tour-des">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <button class="text-white tour-ticket js-buy-tk">Buy tickets</button>
+                                    <button class="s-full-width text-white tour-ticket js-buy-tk">Buy tickets</button>
                                 </div>
                             </div>
                             <!--San Francisco-->
-                            <div class="pad-bot-64 s-col-full float-l col-30 tour-item">
+                            <div class="s-col-full float-l col-30 tour-item">
                                 <img class="col-100 tour-img" src="./assets/img/tour-places/sanfran.jpg" alt="San Francisco">
                                 <div class="tour-info">
                                     <h3 class="tour-place">San Francisco</h3>
                                     <p class="tour-time">Fri 27 Nov 2016</p>
                                     <p class="tour-des">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <button class="text-white tour-ticket js-buy-tk">Buy tickets</button>
+                                    <button class="s-full-width text-white tour-ticket js-buy-tk">Buy tickets</button>
                                 </div>
                             </div>
                         </div>
@@ -119,26 +119,35 @@
             </div>
             <!--Start: contact section-->
             <div id="contact" class="section-content">
-                <div class="text-center section-text">
-                    <h2 class="section-head">Contact</h2>
-                    <p class="section-subhead">Fan??? Drop a note!</p>
-                    <div class="contact-mess">
-                    </div>
-                    <div class="contact-info">
-                        <p><i class="contact-icon ti-location-pin"></i>Chicago, US</p>
-                        <p><i class="contact-icon ti-mobile"></i>Phone: +00 151515</p>
-                        <p><i class="contact-icon ti-email"></i>Email: mail@mail.com</p>
-                    </div>
-                    <div class="messenger">
-                        <form action="">
-                            <div class="mess-info">
-                                <input type="text" class="mess-wth45 mess-input" placeholder="Name" required name="Name">
-                                <input type="email" class="mess-wth45 mess-input" placeholder="Email" required name="Email">
-                            </div>
-                            <input type="text" class="mess-wth mess-input" placeholder="Messenger" required name="Messenger">
-                            <br>
-                            <button class="text-white mess-send">Send</button>
-                        </form>
+                <div class="section-text">
+                    <h2 class="text-center section-head">Contact</h2>
+                    <p class="text-center section-subhead">Fan??? Drop a note!</p>
+                 
+                    <div class="row contact-content">
+                        <div class="col col-50 s-col-full contact-info">
+                            <p><i class="contact-icon ti-location-pin"></i>Chicago, US</p>
+                            <p><i class="contact-icon ti-mobile"></i>Phone: +00 151515</p>
+                            <p><i class="contact-icon ti-email"></i>Email: mail@mail.com</p>
+                        </div>
+                        <div class="col col-50 s-col-full contact-form">
+                            <form action="">
+                                <div class="row">
+                                    <div class="s-col-full col col-50">
+                                        <input type="text" class="form-control" placeholder="Name" required name="Name"> <!--required có nghĩa là bắt buộc nhập liệu-->
+                                    </div>
+                                    <div class="s-mt-8 s-col-full col col-50">
+                                        <input type="email" class="form-control" placeholder="Email" required name="Email">
+                                    </div>
+                                </div>
+                                <div class="row mt-8">
+                                    <div class="col col-100">
+                                        <input type="text" class="form-control" placeholder="Messenger" required name="Messenger">
+                                    </div>
+                                </div>
+                                <br>
+                                <button class="s-full-width text-white mess-send">Send</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
